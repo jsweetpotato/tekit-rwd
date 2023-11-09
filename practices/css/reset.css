@@ -1,9 +1,9 @@
-/* // https://piccalil.li/blog/a-modern-css-reset */
+/* https://piccalil.li/blog/a-modern-css-reset */
 
 /* Box sizing rules */
-*,
-*::before,
-*::after {
+body *,
+body *::before,
+body *::after {
   box-sizing: border-box;
 }
 
@@ -38,7 +38,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.15;
 }
 
 /* A elements that don't have a class get default styles */
@@ -61,8 +61,16 @@ select {
   font: inherit;
 }
 
+button {
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-/* @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
   }
@@ -75,4 +83,4 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-} */
+}

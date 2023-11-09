@@ -1,1 +1,28 @@
-<!-- picture 요소 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="picture.css" />
+  </head>
+  <body>
+    <div class="container">
+      <figure class="picture">
+        <!-- picture 태그는 이미지에 어떤 소스를 공급할지 결정해주는 영역일 뿐이다. CSS width가 안먹음 -->
+        <!-- picture는 예외 사항이 많기 때문에 (ex auto가 안먹음) 되도록 다른 태그에 스타일 적용 -->
+        <picture>
+          <source
+            srcset="./images/banner-narrow.jpg 375w, ./images/banner-narrow@2x.jpg 2x"
+            media="(max-width: 768px)"
+          />
+          <source
+            srcset="./images/banner-wide.jpg 768w, ./images/banner-wide@2x.jpg 2x"
+            media="(min-width: 768px)"
+          />
+          <img src="./images/image-src.png" alt="" />
+        </picture>
+      </figure>
+    </div>
+  </body>
+</html>

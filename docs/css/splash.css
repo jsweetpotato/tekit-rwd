@@ -1,28 +1,44 @@
 .splash-area {
   width: 100%;
   height: 100svh;
-  background-color: #2d2d2d;
+  background-color: var(--grayscale-white);
+  color: var(--primary-blue-1);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
+  & .splash-logo {
+    width: 32%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    animation: fadeEffect 2000ms ease-in-out both;
+  }
+
+  & .splash-img {
+    width: clamp(5rem, 100%, 9.375rem);
+    /* max-width: 100%;  bitmap 이미지일 경우 max-width 사용 */
+  }
+
+  & .splash-caption {
+    font-size: clamp(1.5rem, 10vw, 4rem);
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: -3px;
+  }
 }
 
-.splash-logo {
-  width: 30%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 768px) {
+  .splash-caption {
+    white-space: nowrap;
+  }
 }
 
-.splash-img {
-  width: 100%;
-  /* max-width: 100%;  bitmap 이미지일 경우 max-width 사용 */
-}
-
-.splash-caption {
-  background-color: darkgray;
-  font-size: clamp(1.5rem, 10vw, 4rem);
-  white-space: nowrap;
+@media (prefers-color-scheme: dark) {
+  .splash-area {
+    background-color: var(--primary-blue-1);
+    color: var(--grayscale-white);
+  }
 }
