@@ -1,0 +1,28 @@
+.splash-area {
+  width: 100%;
+  height: 100svh;
+  background-color: #2d2d2d;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-logo {
+  width: 30%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-img {
+  width: 100%;
+  /* max-width: 100%;  bitmap 이미지일 경우 max-width 사용 */
+}
+
+.splash-caption {
+  background-color: darkgray;
+  font-size: clamp(1.5rem, 10vw, 4rem);
+  white-space: nowrap;
+}
