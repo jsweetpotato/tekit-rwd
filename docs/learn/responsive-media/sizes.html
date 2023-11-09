@@ -1,1 +1,24 @@
-<!-- sizes 속성 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sizes 속성</title>
+  </head>
+  <body>
+    <figure class="sizes">
+      <!-- sizes를 주면 max-width에 맞춰서 이미지를 넣을 수 있다. -->
+      <!-- 이 속성을 사용해도 이미지 설정이 pixel-radio에 영향을 받는다. -->
+      <img
+        src="./images/normal-1920.jpg"
+        srcset="
+          ./images/small-550.jpg    550w,
+          ./images/medium-1024.jpg 1024w,
+          ./images/large-1600.jpg  1600w
+        "
+        sizes="(max-width:320px) 550px, (max-width:768px) 1024px, 1600px"
+        alt=""
+      />
+    </figure>
+  </body>
+</html>
